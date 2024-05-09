@@ -1600,4 +1600,65 @@ export const _roboCard = {
       descripcion: 'Todas las razas',
     },
   ],
+  tipo_habilidades: [
+    {
+      code: 'UPGRADE',
+      descripcion: 'sube ataque a un minion',
+      efecto: 'MINION',
+      tipo: 'VIDA',
+    },
+    {
+      code: 'UPGRADE',
+      descripcion: 'sube vida a la mesa',
+      efecto: 'MESA',
+      tipo: 'VIDA',
+    },
+    {
+      code: 'UPGRADE',
+      descripcion: 'sube ataque a la mesa',
+      efecto: 'MESA',
+      tipo: 'ATAQUE',
+    }
+  ],
+  habilidades: [
+    {
+      code: 'SURGIR',
+      descripcion: 'realiza {accion} al ivocarse en la mesa',
+    },
+    {
+      code: 'AGONIA',
+      descripcion: 'realiza {accion} al morir',
+    },
+    {
+      code: 'TOCAR',
+      descripcion: 'realiza {accion} al chocar con otro minion',
+    }
+  ],
+  join_habilidades: [
+    {
+      tblHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesEfecto: 'MINION',
+    },
+    {
+      tblHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesEfecto: 'MESA',
+    },
+    {
+      tblHabilidadesCode: 'SURGIR',
+      tblTipoHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesEfecto: 'MINION',
+    },
+    {
+      tblHabilidadesCode: 'AGONIA',
+      tblTipoHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesEfecto: 'MINION',
+    },
+    {
+      tblHabilidadesCode: 'AGONIA',
+      tblTipoHabilidadesCode: 'UPGRADE',
+      tblTipoHabilidadesEfecto: 'MINION',
+    }
+  ]
 };

@@ -6,7 +6,7 @@ export class TipoHabilidad {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column('text', { unique: true })
+  @Column('text')
   code: string;
 
   @Column('text')
@@ -14,6 +14,9 @@ export class TipoHabilidad {
 
   @Column('text')
   efecto: string;
+
+  @Column('text')
+  tipo: string;
 
   @ManyToMany(() => Habilidad, habilidades => habilidades.tiposHabilidades)
   habilidades: Habilidad[];

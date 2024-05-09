@@ -6,6 +6,10 @@ export class CreateCartaDto {
     @MinLength(3)
     nombre:string;
 
+    @IsString()
+    @MinLength(3)
+    descripcion:string;
+
     @IsNumber()
     coste:number;
 
@@ -19,7 +23,15 @@ export class CreateCartaDto {
 
     @IsString()
     @IsOptional()
+    num_mejora?:string;
+
+    @IsString()
+    @IsOptional()
     raza?:Raza;
+
+    @IsString()
+    @IsOptional()
+    habilidad?:Raza;
 
     @IsString({each:true})
     @IsOptional()

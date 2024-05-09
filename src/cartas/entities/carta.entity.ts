@@ -23,6 +23,9 @@ export class Carta {
   @Column('text',{unique:true})
   nombre: string;
 
+  @Column('text')
+  descripcion: string;
+
   @Column('numeric')
   coste: number;
 
@@ -32,8 +35,8 @@ export class Carta {
   @Column('numeric', { default: 0 })
   ataque: number;
 
-  @Column('numeric', { default: 0 })
-  num_mejora: number;
+  @Column('text')
+  num_mejora: string;
   
   @ManyToOne(() => TipoCarta, tipoCarta => tipoCarta.cartas, { eager: true })
   @JoinColumn()
@@ -43,9 +46,9 @@ export class Carta {
   @JoinColumn()
   raza: Raza;
 
-  @ManyToOne(() => Habilidad, habilidades => habilidades.cartas, { eager: true })
+  @ManyToOne(() => Habilidad, habilidad => habilidad.cartas, { eager: true })
   @JoinColumn()
-  habilidades: Habilidad;
+  habilidad: Habilidad;
 
   @ManyToOne(() => ImagenCarta, imagenCarta => imagenCarta.cartas, { eager: true })
   imagenCarta: ImagenCarta;

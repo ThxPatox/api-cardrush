@@ -27,6 +27,6 @@ export class Habilidad {
   @JoinTable({name:'join_habilidades_tipo_habilidad'})
   tiposHabilidades: TipoHabilidad;
 
-  @OneToMany(() => Carta, carta => carta.habilidades)
+  @OneToMany(() => Carta, carta => carta.habilidad)
   cartas: Carta[];
 }
